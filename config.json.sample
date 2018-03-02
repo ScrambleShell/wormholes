@@ -1,0 +1,7 @@
+config:
+  namecheap:
+    username: "username"
+    password: "password"
+    api:
+      name: "api name"
+      token: "api token"
