@@ -1,4 +1,4 @@
-# Wormholes: End point management system
+# Wormholes: Diverse end point management system
 Scramble suit identity protocol manages multiple segregated internet identities simultaneously, and a core part of identity management is management of a diverse array of end points associated to a given identity. Endpoints under the control of a given identity is used to communicate, transfer data, or serve an API. 
 
 

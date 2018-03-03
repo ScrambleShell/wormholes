@@ -7,6 +7,8 @@ import (
 	. "github.com/hackwave/color"
 )
 
+type
+
 type Domain struct {
 	name string
 }
@@ -18,11 +20,7 @@ type Account struct {
 }
 
 func main() {
-	a := Account{
-		username: "kosmosblack",
-		apiToken: "024f2f496a3045979a89825c1c2f43bb",
-	}
-
+	// TODO: Use a configuration file
 	client := namecheap.NewClient(a.username, a.apiToken, a.username)
 
 	fmt.Println(Magenta("Namecheap Domains"))
