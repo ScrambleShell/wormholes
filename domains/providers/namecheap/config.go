@@ -1,13 +1,13 @@
 package namecheap
 
-type Config struct {
+type config struct {
 	debug    bool   `json:"debug"`
 	username string `json:"username"`
 	password string `json:"password"`
 	api      `json:"api"`
 }
 
-type API struct {
+type api struct {
 	username string `json:"username"`
 	token    string `json:"token"`
 }
