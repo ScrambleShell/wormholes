@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 
 	. "github.com/hackwave/color"
 
@@ -11,7 +12,7 @@ import (
 )
 
 type Config struct {
-	NamecheapConfig namecheap.config `json:"namecheap"`
+	NamecheapConfig namecheap.Config `json:"namecheap"`
 }
 
 func main() {
@@ -28,6 +29,9 @@ func main() {
 	json.Unmarshal(jsonFile, &config)
 
 	fmt.Println("Loaded JSON Configuration: ", config)
+	fmt.Println("Config.namecheap: ", config.namecheap)
+	fmt.Println("Config.namecheap.username: ", config.namecheap.username)
+
 	// TODO: Example usage of the domain provider interface
 	//nc := NamecheapProvider{
 	//	Config: {
