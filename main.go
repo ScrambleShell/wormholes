@@ -12,6 +12,7 @@ import (
 )
 
 type Config struct {
+	Debug           bool             `json:"debug"`
 	NamecheapConfig namecheap.Config `json:"namecheap"`
 }
 
@@ -29,8 +30,9 @@ func main() {
 	json.Unmarshal(jsonFile, &config)
 
 	fmt.Println("Loaded JSON Configuration: ", config)
-	fmt.Println("Config.namecheap: ", config.NamecheapConfig)
-	fmt.Println("Config.namecheap.username: ", config.NamecheapConfig.Username)
+	fmt.Println("Config.NamecheapConfig: ", config.NamecheapConfig)
+	fmt.Println("Config.NamecheapConfig.Username: ", config.NamecheapConfig.Username)
+	fmt.Println("Config.NamecheapConfig.Password: ", config.NamecheapConfig.Password)
 
 	// TODO: Example usage of the domain provider interface
 	//nc := NamecheapProvider{
