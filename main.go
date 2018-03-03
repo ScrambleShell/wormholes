@@ -6,7 +6,7 @@ import (
 
 	. "github.com/hackwave/color"
 
-	"github.com/scrambleshell/wormholes/domains"
+	//"github.com/scrambleshell/wormholes/domains"
 	"github.com/scrambleshell/wormholes/domains/providers/namecheap"
 )
 
