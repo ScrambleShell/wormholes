@@ -1,8 +1,10 @@
 package main
 
 import (
-	"encoding/json"
+	// TODO: Use JSON to log info
+	//"encoding/json"
 	"fmt"
+	"gopkg.in/yaml.v2"
 	"io/ioutil"
 
 	. "github.com/hackwave/color"
@@ -21,13 +23,13 @@ func main() {
 	fmt.Println(Gray("=========================="))
 
 	// TODO: Load JSON configuration
-	jsonFile, err := ioutil.ReadFile("./config.json")
+	yamlFile, err := ioutil.ReadFile("./config.json")
 	if err != nil {
 		fmt.Println(Red("[Error]"), Gray(err))
 	}
 
 	var config Config
-	err = json.Unmarshal(jsonFile, &config)
+	err = yaml.Unmarshal(yamlFile, &config)
 	if err != nil {
 		fmt.Println(Red("[ Error ]"), Gray(err))
 	}
