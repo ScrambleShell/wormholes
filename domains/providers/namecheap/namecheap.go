@@ -46,7 +46,7 @@ func (self NamecheapProvider) RegisteredDomains() []string {
 		fmt.Println("| WhoisGuard |", domain.WhoisGuard)
 		fmt.Println("|____________|________________|")
 
-		domainNames := append(domainNames, domain.Name)
+		domainNames = append(domainNames, domain.Name)
 	}
 	return domainNames
 }
