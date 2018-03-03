@@ -32,7 +32,20 @@ func (self NamecheapProvider) RegisteredDomains() []string {
 		fmt.Println(Red("[Error]"), err)
 	}
 	for _, domain := range domains {
-		fmt.Println("Namecheap Domain object: ", domain)
+		fmt.Println("_______________________________")
+		fmt.Println("|                             |")
+		fmt.Println("|___Namecheap_Domain_Object___|")
+		fmt.Println("| ID         |", domain.ID)
+		fmt.Println("| Name       |", domain.Name)
+		fmt.Println("| User       |", domain.User)
+		fmt.Println("| Created    |", domain.Name)
+		fmt.Println("| Expires    |", domain.Expires)
+		fmt.Println("| IsExpired  |", domain.IsExpired)
+		fmt.Println("| IsLocked   |", domain.IsLocked)
+		fmt.Println("| AutoRenew  |", domain.AutoRenew)
+		fmt.Println("| WhoisGuard |", domain.WhoisGuard)
+		fmt.Println("|____________|________________|")
+
 		domainNames := append(domainNames, domain)
 	}
 	return domainNames
