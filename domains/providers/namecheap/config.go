@@ -4,7 +4,7 @@ type Config struct {
 	debug    bool   `json:"debug"`
 	username string `json:"username"`
 	password string `json:"password"`
-	API      `json:"api"`
+	api      `json:"api"`
 }
 
 type API struct {

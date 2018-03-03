@@ -8,21 +8,21 @@ import (
 )
 
 type NamecheapProvider struct {
-	Config
-	API namecheap.Client
+	config
+	API *namecheap.Client
 }
 
 func (self NamecheapProvider) SetDebug(debug bool) {
-	self.Config.debug = debug
+	self.config.debug = debug
 }
 
 func (self NamecheapProvider) InitializeAPI() {
-	self.API = namecheap.NewClient(self.Config.username, self.Config.apiToken, self.Config.apiUsername)
+	self.API = namecheap.NewClient(self.config.username, self.config.api.token, self.config.api.username)
 }
 
 func (self NamecheapProvider) RegisteredDomains() {
-	if self.Config.debug {
-		fmt.Println(Gray("Looking up domains for the API account: "), Green(account.username))
+	if self.config.debug {
+		fmt.Println(Gray("Looking up domains for the API account: "), Green(self.config.api.username))
 	}
 	// TODO: Get maximum then use that to get all the domains
 	domains, err := client.DomainsGetList(1, 100)
