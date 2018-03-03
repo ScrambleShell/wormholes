@@ -1,4 +1,4 @@
-package main
+package name
 
 type Config struct {
 	debug    bool

@@ -1,10 +1,10 @@
-package domainprovider
+package domains
 
 import (
 //"fmt"
 )
 
-type DomainProvider interface {
+type Provider interface {
 	// Pass in configuration, using an interface to support different
 	// configuration object
 
