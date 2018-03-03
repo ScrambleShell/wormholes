@@ -12,8 +12,8 @@ import (
 )
 
 type Config struct {
-	Debug           bool             `json:"debug"`
-	NamecheapConfig namecheap.Config `json:"namecheap"`
+	Debug           bool             `json:"debug" yaml:"debug"`
+	NamecheapConfig namecheap.Config `json:"namecheap" yaml:"namecheap"`
 }
 
 func main() {
@@ -27,9 +27,9 @@ func main() {
 	}
 
 	var config Config
-	err := json.Unmarshal(jsonFile, &config)
+	err = json.Unmarshal(jsonFile, &config)
 	if err != nil {
-		fmt.Printf(Red("[ Error ]"), Gray(err))
+		fmt.Println(Red("[ Error ]"), Gray(err))
 	}
 
 	fmt.Println("Loaded JSON Configuration: ", config)

@@ -1,13 +1,13 @@
 package namecheap
 
 type Config struct {
-	Debug    bool   `json:"debug"`
-	Username string `json:"username"`
-	Password string `json:"password"`
-	API      `json:"api"`
+	Debug    bool   `json:"debug" yaml:"debug"`
+	Username string `json:"username" yaml:"username"`
+	Password string `json:"password" yaml:"password"`
+	API      `json:"api" yaml:"api"`
 }
 
 type API struct {
-	Username string `json:"username"`
-	Token    string `json:"token"`
+	Username string `json:"username" yaml:"username"`
+	Token    string `json:"token" yaml:"token"`
 }
