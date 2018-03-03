@@ -27,6 +27,7 @@ func (self NamecheapProvider) RegisteredDomains() []string {
 	}
 	// TODO: Get maximum then use that to get all the domains
 	var domainNames []string
+	fmt.Println("API as string is: ", self.API)
 	domains, err := self.API.DomainsGetList(1, 100)
 	if err != nil {
 		fmt.Println(Red("[Error]"), err)

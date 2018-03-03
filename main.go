@@ -68,6 +68,11 @@ func main() {
 
 		nc.InitializeAPI()
 		fmt.Println(Green("[Domains:Namecheap:API]"), "API connection successfully Established.")
+
+		fmt.Println(Gray("[Domains:Namecheap:API"), "Query API for all registered domains with domain provider...")
+		domainNames := nc.RegisteredDomains()
+		fmt.Println("Domain name count returned from domains names is: ", len(domainNames))
+
 	} else {
 		fmt.Println(Red("[Fatal Error]"), Gray("No domain provider configuration found, modify the loaded configuration so it contains the API information needed to connect to the domain provider API."))
 	}
