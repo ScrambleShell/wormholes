@@ -11,11 +11,11 @@ import (
 )
 
 type Config struct {
-	NamecheapConfig namecheap.Config `json:"namecheap"`
+	NamecheapConfig namecheap.config `json:"namecheap"`
 }
 
 func main() {
-	fmt.Println(Magento("Wormholes"), Gray(":"), Blue("Endpoint Management"))
+	fmt.Println(Magenta("Wormholes"), Gray(":"), Blue("Endpoint Management"))
 	fmt.Println(Gray("=========================="))
 
 	// TODO: Load JSON configuration

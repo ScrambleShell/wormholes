@@ -8,22 +8,22 @@ import (
 )
 
 type NamecheapProvider struct {
-	config
+	Config
 	API *namecheap.Client
 }
 
 func (self NamecheapProvider) SetDebug(debug bool) {
-	self.config.debug = debug
+	self.Config.debug = debug
 }
 
 func (self NamecheapProvider) InitializeAPI() {
-	self.API = namecheap.NewClient(self.config.username, self.config.api.token, self.config.api.username)
+	self.API = namecheap.NewClient(self.Config.username, self.Config.api.token, self.Config.api.username)
 }
 
 // TODO: Domain should probably be moved to a more general models package to avoid circular imports
 func (self NamecheapProvider) RegisteredDomains() []string {
-	if self.config.debug {
-		fmt.Println(Gray("Looking up domains for the API account: "), Green(self.config.api.username))
+	if self.Config.debug {
+		fmt.Println(Gray("Looking up domains for the API account: "), Green(self.Config.api.username))
 	}
 	// TODO: Get maximum then use that to get all the domains
 	var domainNames []string
