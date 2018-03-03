@@ -27,9 +27,13 @@ func main() {
 	}
 
 	var config Config
-	json.Unmarshal(jsonFile, &config)
+	err := json.Unmarshal(jsonFile, &config)
+	if err != nil {
+		fmt.Printf(Red("[ Error ]"), Gray(err))
+	}
 
 	fmt.Println("Loaded JSON Configuration: ", config)
+	fmt.Println("Where is the false?")
 	fmt.Println("Config.NamecheapConfig: ", config.NamecheapConfig)
 	fmt.Println("Config.NamecheapConfig.Username: ", config.NamecheapConfig.Username)
 	fmt.Println("Config.NamecheapConfig.Password: ", config.NamecheapConfig.Password)
