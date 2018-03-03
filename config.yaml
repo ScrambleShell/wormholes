@@ -1,8 +1,7 @@
-config:
-  debug: true
-  namecheap:
+debug: true
+namecheap:
+  username: "kosmosblack"
+  password: "password"
+  api:
     username: "kosmosblack"
-    password: "password"
-    api:
-      username: "kosmosblack"
-      token: "api token"
+    token: "api token"

@@ -23,7 +23,7 @@ func main() {
 	fmt.Println(Gray("=========================="))
 
 	// TODO: Load JSON configuration
-	yamlFile, err := ioutil.ReadFile("./config.json")
+	yamlFile, err := ioutil.ReadFile("./config.yaml")
 	if err != nil {
 		fmt.Println(Red("[Error]"), Gray(err))
 	}
