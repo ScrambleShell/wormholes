@@ -26,11 +26,16 @@ func (self NamecheapProvider) RegisteredDomains() []string {
 		fmt.Println(Gray("Looking up domains for the API account: "), Green(self.config.api.username))
 	}
 	// TODO: Get maximum then use that to get all the domains
+	var domainNames []string
 	domains, err := self.API.DomainsGetList(1, 100)
 	if err != nil {
 		fmt.Println(Red("[Error]"), err)
 	}
-	return domains
+	for _, domain := range domains {
+		fmt.Println("Namecheap Domain object: ", domain)
+		domainNames := append(domainNames, domain)
+	}
+	return domainNames
 }
 
 func (self NamecheapProvider) RegisterDomain(name string) {
