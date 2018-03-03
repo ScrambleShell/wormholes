@@ -9,7 +9,8 @@ type DNS struct {
 }
 
 type Domain struct {
-	name string
+	name        string
+	nameservers []string
 	DNS
 }
 

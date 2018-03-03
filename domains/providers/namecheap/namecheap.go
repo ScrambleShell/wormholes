@@ -21,7 +21,7 @@ func (self NamecheapProvider) InitializeAPI() {
 }
 
 // TODO: Domain should probably be moved to a more general models package to avoid circular imports
-func (self NamecheapProvider) RegisteredDomains() []domains.Domain {
+func (self NamecheapProvider) RegisteredDomains() []string {
 	if self.config.debug {
 		fmt.Println(Gray("Looking up domains for the API account: "), Green(self.config.api.username))
 	}

@@ -12,7 +12,9 @@ type Provider interface {
 	// return a usable connection object
 	InitializeAPI()
 
-	RegisteredDomains() []Domain
+	// TODO: Need some way to populate a morecomplex domain object that will hold more detailed
+	// information about the domain that includes DNS records and registered name servers
+	RegisteredDomains() []string
 	RegisterDomain(string)
 	//TODO: Add DNS configuration for domains
 }
