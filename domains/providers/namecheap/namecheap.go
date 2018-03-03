@@ -5,13 +5,11 @@ import (
 
 	. "github.com/hackwave/color"
 	namecheap "github.com/scrambleshell/namecheap-go"
-	"github.com/scrambleshell/wormholes/domains"
 )
 
 type NamecheapProvider struct {
 	Config
-	API               namecheap.Client
-	RegisteredDomains []domains.Domain
+	API namecheap.Client
 }
 
 func (self NamecheapProvider) SetDebug(debug bool) {
@@ -22,7 +20,7 @@ func (self NamecheapProvider) InitializeAPI() {
 	self.API = namecheap.NewClient(self.Config.username, self.Config.apiToken, self.Config.apiUsername)
 }
 
-func (self NamecheapProvider) RegisteredDomains() []domains.Domain {
+func (self NamecheapProvider) RegisteredDomains() {
 	if self.Config.debug {
 		fmt.Println(Gray("Looking up domains for the API account: "), Green(account.username))
 	}
