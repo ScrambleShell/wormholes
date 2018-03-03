@@ -29,8 +29,8 @@ func main() {
 	json.Unmarshal(jsonFile, &config)
 
 	fmt.Println("Loaded JSON Configuration: ", config)
-	fmt.Println("Config.namecheap: ", config.namecheap)
-	fmt.Println("Config.namecheap.username: ", config.namecheap.username)
+	fmt.Println("Config.namecheap: ", config.NamecheapConfig)
+	fmt.Println("Config.namecheap.username: ", config.NamecheapConfig.Username)
 
 	// TODO: Example usage of the domain provider interface
 	//nc := NamecheapProvider{
