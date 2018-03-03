@@ -34,5 +34,5 @@ func (self NamecheapProvider) RegisteredDomains() []domains.Domain {
 }
 
 func (self NamecheapProvider) RegisterDomain(name string) {
-
+	// TODO: Register a domain with Namecheap.com
 }
