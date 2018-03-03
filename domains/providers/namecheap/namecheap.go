@@ -9,15 +9,16 @@ import (
 
 type NamecheapProvider struct {
 	Config
-	API namecheap.Client
+	API *namecheap.Client
 }
 
 func (self NamecheapProvider) SetDebug(debug bool) {
 	self.Config.Debug = debug
 }
 
-func (self NamecheapProvider) InitializeAPI() {
-	self.API = *(namecheap.NewClient(self.Config.Username, self.Config.API.Token, self.Config.API.Username))
+func (self NamecheapProvider) InitAPI() NamecheapProvider {
+	self.API = namecheap.NewClient(self.Config.Username, self.Config.API.Token, self.Config.API.Username)
+	return self
 }
 
 // TODO: Domain should probably be moved to a more general models package to avoid circular imports

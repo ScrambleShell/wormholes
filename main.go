@@ -66,7 +66,8 @@ func main() {
 			},
 		}
 
-		nc.InitializeAPI()
+		nc = nc.InitAPI()
+		fmt.Println("NC as string: ", nc)
 		fmt.Println(Green("[Domains:Namecheap:API]"), "API connection successfully Established.")
 
 		fmt.Println(Gray("[Domains:Namecheap:API"), "Query API for all registered domains with domain provider...")
