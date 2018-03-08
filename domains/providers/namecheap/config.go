@@ -8,6 +8,7 @@ type Config struct {
 }
 
 type API struct {
-	Username string `json:"username" yaml:"username"`
-	Token    string `json:"token" yaml:"token"`
+	Username  string `json:"username" yaml:"username"`
+	Token     string `json:"token" yaml:"token"`
+	IPAddress string `json:"ip_address" yaml:"ip_address"`
 }

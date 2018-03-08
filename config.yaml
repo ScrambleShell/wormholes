@@ -1,7 +1,0 @@
-debug: true
-namecheap:
-  username: "kosmosblack"
-  password: "password"
-  api:
-    username: "kosmosblack"
-    token: "api token"
