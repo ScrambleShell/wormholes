@@ -1,5 +1,7 @@
 package name
 
+import "github.com/scrambleshell/wormholes/domains"
+
 type NameProvider struct {
 	Config
 }

@@ -3,7 +3,7 @@ package namecheap
 import (
 	"fmt"
 
-	. "github.com/hackwave/color"
+	. "github.com/hackwave/textui/color"
 	namecheap "github.com/scrambleshell/namecheap-go"
 )
 

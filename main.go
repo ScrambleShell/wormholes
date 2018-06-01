@@ -3,11 +3,12 @@ package main
 import (
 	//"encoding/json"
 	"fmt"
-	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"os"
 
-	. "github.com/hackwave/color"
+	"gopkg.in/yaml.v2"
+
+	. "github.com/hackwave/textui/color"
 
 	//"github.com/scrambleshell/wormholes/domains"
 	"github.com/scrambleshell/wormholes/domains/providers/namecheap"
